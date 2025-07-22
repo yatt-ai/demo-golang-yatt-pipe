@@ -40,3 +40,7 @@ gotestsum --junitfile test-results.xml -- ./...
 # Generate JSON report
 go test -json ./... > test-results.json
 ```
+
+## Learn More
+
+For more information about this project, check out our [blog post](https://example.com/blog-post) (coming soon).
