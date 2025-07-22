@@ -1,4 +1,4 @@
-module github.com/sky/calculator
+module github.com/yatt-ai/calculator
 
 go 1.24.2
 

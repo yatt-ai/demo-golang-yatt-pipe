@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/sky/calculator/calculator"
+	"github.com/yatt-ai/calculator/calculator"
 )
 
 func main() {
