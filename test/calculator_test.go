@@ -1,9 +1,10 @@
-package calculator
+package calculator_test
 
 import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/yatt-ai/calculator/calculator"
 )
 
 func TestAdd(t *testing.T) {
@@ -23,7 +24,7 @@ func TestAdd(t *testing.T) {
 	// Run test cases
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := Add(tt.a, tt.b)
+			result := calculator.Add(tt.a, tt.b)
 			assert.Equal(t, tt.expected, result, "Addition result should match expected value")
 		})
 	}
@@ -44,7 +45,7 @@ func TestSubtract(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := Subtract(tt.a, tt.b)
+			result := calculator.Subtract(tt.a, tt.b)
 			assert.Equal(t, tt.expected, result, "Subtraction result should match expected value")
 		})
 	}
@@ -65,7 +66,7 @@ func TestMultiply(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := Multiply(tt.a, tt.b)
+			result := calculator.Multiply(tt.a, tt.b)
 			assert.Equal(t, tt.expected, result, "Multiplication result should match expected value")
 		})
 	}
@@ -88,7 +89,7 @@ func TestDivide(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result, err := Divide(tt.a, tt.b)
+			result, err := calculator.Divide(tt.a, tt.b)
 			
 			if tt.hasError {
 				assert.Error(t, err, "Expected an error for division by zero")

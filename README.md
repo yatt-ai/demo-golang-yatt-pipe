@@ -13,10 +13,10 @@ go mod tidy
 
 ```bash
 # Run all tests
-go test ./...
+go test ./test/...
 
 # Run tests with verbose output
-go test -v ./...
+go test -v ./test/...
 ```
 
 ## Generating Test Reports
@@ -31,14 +31,14 @@ go install gotest.tools/gotestsum@latest
 export PATH=$PATH:~/go/bin
 
 # Generate JUnit XML report
-gotestsum --junitfile test-results.xml -- ./...
+gotestsum --junitfile test-results.xml -- ./test/...
 ```
 
 ### JSON Report
 
 ```bash
 # Generate JSON report
-go test -json ./... > test-results.json
+go test -json ./test/... > test-results.json
 ```
 
 ## Learn More
